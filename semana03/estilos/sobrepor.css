@@ -28,8 +28,8 @@ h1 {
       
 .estatisticas {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  bottom: 25px;
+  left: 15px;
   background: radial-gradient(#eee, #323A06);
   border: 1px solid #000;
   padding: 0.65rem;
