@@ -1,1 +1,141 @@
+/* ==========================
+   Variáveis CSS
+========================== */
+:root {
+  --cor-primaria: #055a05;      /* verde-floresta */
+  --cor-secundaria: #f4a261;    /* bege médio */
+  --cor-destaque1: #264653;     /* azul-escuro acinzentado */
+  --cor-destaque2: #e9c46a;     /* amarelo-claro dourado */
+  --fonte-titulo: "Times New Roman", "Georgia", serif;
+  --fonte-body: Arial, Helvetica, sans-serif;
+}
 
+/* ==========================
+   Reset (box model)
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==========================
+   Estilos gerais do body
+========================== */
+body {
+  font-family: var(--fonte-body);
+  color: var(--cor-destaque1);
+}
+
+/* ==========================
+   Largura da página
+========================== */
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+/* ==========================
+   Títulos
+========================== */
+h1, h2 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-primaria);
+  text-align: center;
+}
+
+/* ==========================
+   Margem/padding básicos
+========================== */
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+
+/* ==========================
+   Cabeçalho / Navegação
+========================== */
+header {
+  background-color: var(--cor-primaria);
+  color: #fff;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ==========================
+   Rodapé e redes sociais
+========================== */
+footer {
+  background-color: var(--cor-destaque1);
+  color: #fff;
+  text-align: center;
+}
+.redes-sociais {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.redes-sociais a {
+  text-decoration: none;
+}
+.redes-sociais img {
+  width: 32px;
+  height: 32px;
+}
+
+/* ==========================
+   Elemento Hero
+========================== */
+.hero {
+  position: relative;
+}
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.7;
+  background-color: var(--cor-destaque1);
+  color: #fff; /* texto branco - certifique-se de que haja contraste suficiente com a cor de fundo */
+}
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 320px;
+  background-color: rgba(38, 70, 83, 0.85);
+  color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+}
+.hero article img {
+  float: right;
+  width: 125px;
+  margin: 0 0 8px 8px;
+  border: 2px solid var(--cor-secundaria);
+}
+
+/* ==========================
+   Ajustes adicionais
+========================== */
+main img {
+  max-width: 100%;
+  height: auto;
+}
+section {
+  text-align: center;
+}
