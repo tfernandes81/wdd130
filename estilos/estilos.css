@@ -20,6 +20,7 @@ main {
 }
 main img {
     width: 200px;
+}
 img {
   width: 150px;
   height: auto;
@@ -30,13 +31,16 @@ img {
 p {
   padding: 0px;
 }
+
+/* Imagem de perfil flutuante */
+.perfil-float {
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+
 aside {
     width: 300px;
     margin: 20px auto;
-    border: 1px solid #333;
-    padding: 15px;
-    background-color: #f0f0f0;
-    color: #222;
 }
 aside img {
     width: 200px;
@@ -50,11 +54,30 @@ footer {
 main p {
     padding: 0;
 }
+
 /* Seletores de Classe */
-  .caixa {
+.caixa {
   margin: 1rem;
   border: 1px solid rgb(0 0 0 / 10%);
   padding: 1rem;
   background-color: #ddd;
   color: #000;
+}
+
+/* Sobreposição de título na imagem */
+.imagem-titulo {
+    position: relative;
+}
+.imagem-titulo img {
+    width: 100%;
+    display: block;
+}
+.imagem-titulo h2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #000;
 }
