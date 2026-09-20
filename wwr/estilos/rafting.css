@@ -69,6 +69,9 @@ nav a {
   text-decoration: none;
   font-weight: bold;
 }
+nav a:hover {
+  color: var(--cor-destaque2);
+}
 
 /* ==========================
    Rodapé e redes sociais
