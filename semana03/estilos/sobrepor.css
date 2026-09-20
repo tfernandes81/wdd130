@@ -17,7 +17,7 @@ h1 {
       
 .div-principal {
   margin: 10px auto;
-  position: relative; /* O que acontece ao remover? */
+  #position: relative; /* O que acontece ao remover? */
 }
       
 .div-principal img {
