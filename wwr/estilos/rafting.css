@@ -59,7 +59,7 @@ header {
   gap: 16px;
   padding: 16px;
   background-color: var(--cor-primaria);
-  color: #fff;   /* texto branco sobre verde: ~7.6:1 (passa no AA) */
+  color: #fff;   /* texto branco sobre verde: ~7.6:1 */
 }
 header img {
   display: block;
