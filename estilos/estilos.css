@@ -3,24 +3,57 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Passos 1 e 7: largura máxima e centralização */
+header, footer, .grid {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+/* Passo 2: menu com Flex */
 nav {
   background-color: darkblue;
-  padding: 10px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
+
+/* Passo 4: links como elementos de bloco */
 nav a {
-  color: white;
   display: block;
-  padding: 20px;
+  padding: 0.5rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
 }
+
+/* Passo 5: borda inferior no h1 */
 h1 {
   color: darkblue;
+  border-bottom: 2px solid darkblue;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
+
+/* Passo 8: layout em grid (aside à esquerda, main à direita) */
+.grid {
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+  align-items: start;
+}
+
 main {
-  max-width: 840px;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  margin: 1rem;
 }
+
 main img {
-    width: 200px;
+  width: 200px;
 }
+
 img {
   width: 150px;
   height: auto;
@@ -28,31 +61,32 @@ img {
   padding: 2px;
   box-shadow: 0 0 30px gray;
 }
+
 p {
-  padding: 0px;
+  padding: 0;
 }
 
 /* Imagem de perfil flutuante */
 .perfil-float {
-    float: right;
-    margin: 0 0 1rem 1rem;
+  float: right;
+  margin: 0 0 1rem 1rem;
 }
 
 aside {
-    width: 300px;
-    margin: 20px auto;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  position: relative;
 }
+
 aside img {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }
+
 footer {
-    margin-top: 30px;
-    border-top: 2px solid #333;
-    text-align: center;
-}
-main p {
-    padding: 0;
+  margin-top: 30px;
+  border-top: 2px solid #333;
+  text-align: center;
 }
 
 /* Seletores de Classe */
@@ -66,18 +100,20 @@ main p {
 
 /* Sobreposição de título na imagem */
 .imagem-titulo {
-    position: relative;
+  position: relative;
 }
+
 .imagem-titulo img {
-    width: 100%;
-    display: block;
+  width: 100%;
+  display: block;
 }
+
 .imagem-titulo h2 {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    margin: 0;
-    padding: 0.5rem 1rem;
-    background-color: rgba(255, 255, 255, 0.85);
-    color: #000;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
 }
