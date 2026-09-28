@@ -108,8 +108,8 @@ nav a:hover {
   width: 100%;
   padding: 16px;
   text-align: center;
-  background-color: rgba(38, 70, 83, 0.85);  /* fundo translúcido */
-  color: #fff;                                /* texto 100% opaco */
+  background-color: rgba(38, 70, 83, 0.85);
+  color: #fff !important;   /* garante texto branco sobre o fundo azul-escuro */
 }
 .hero article {
   position: absolute;
