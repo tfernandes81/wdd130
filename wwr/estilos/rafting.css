@@ -59,6 +59,7 @@ header {
   gap: 16px;
   padding: 16px;
   background-color: var(--cor-primaria);
+  color: #fff;   /* texto branco sobre verde: ~7.6:1 (passa no AA) */
 }
 header img {
   display: block;
@@ -107,9 +108,8 @@ nav a:hover {
   width: 100%;
   padding: 16px;
   text-align: center;
-  opacity: 0.7;
-  background-color: var(--cor-destaque1);
-  color: #fff; /* texto branco - contraste suficiente com o fundo escuro */
+  background-color: rgba(38, 70, 83, 0.85);  /* fundo translúcido */
+  color: #fff;                                /* texto 100% opaco */
 }
 .hero article {
   position: absolute;
