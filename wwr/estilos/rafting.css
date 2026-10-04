@@ -209,3 +209,107 @@ footer p {
   width: 32px;
   height: 32px;
 }
+
+/* ==========================
+   Página Fale Conosco
+========================== */
+.contato-info {
+  text-align: center;
+}
+.contato-info h1 {
+  margin-bottom: 8px;
+}
+.contato-info p {
+  margin: 0;
+  padding: 2px;
+  font-weight: bold;
+}
+
+.contato-mapa-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+.mapa iframe {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--cor-destaque1);
+}
+
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.form-contato label {
+  font-weight: bold;
+}
+.form-contato input[type="text"],
+.form-contato input[type="email"],
+.form-contato textarea {
+  padding: 8px;
+  border: 1px solid var(--cor-destaque1);
+  font-family: var(--fonte-body);
+  margin-bottom: 8px;
+}
+.proposito {
+  border: none;
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+.proposito legend {
+  font-weight: bold;
+  padding: 0;
+  margin-bottom: 4px;
+}
+.proposito label {
+  display: block;
+  font-weight: normal;
+  margin-bottom: 4px;
+}
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal;
+  margin-bottom: 12px;
+}
+.form-contato button[type="submit"] {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.form-contato button[type="submit"]:hover {
+  background-color: var(--cor-destaque2);
+  color: var(--cor-destaque1);
+}
+
+/* Equipe (reutiliza o padrão de .galeria da página Sobre Nós) */
+.equipe {
+  background-color: var(--cor-fundo-claro);
+}
+.galeria-equipe {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+.galeria-equipe figure {
+  text-align: center;
+}
+.galeria-equipe img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--cor-destaque1);
+}
+.galeria-equipe figcaption {
+  margin-top: 4px;
+  font-weight: bold;
+}
