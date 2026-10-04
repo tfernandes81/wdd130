@@ -6,6 +6,9 @@
   --cor-secundaria: #f4a261;    /* bege médio */
   --cor-destaque1: #264653;     /* azul-escuro acinzentado */
   --cor-destaque2: #e9c46a;     /* amarelo-claro dourado */
+  --cor-branco: #ffffff;
+  --cor-fundo-claro: #dddddd;
+  --cor-overlay: #264653d9;     /* azul-escuro com 85% de opacidade */
   --fonte-titulo: "Times New Roman", "Georgia", serif;
   --fonte-body: Arial, Helvetica, sans-serif;
 }
@@ -59,7 +62,7 @@ header {
   gap: 16px;
   padding: 16px;
   background-color: var(--cor-primaria);
-  color: #fff;   /* texto branco sobre verde: ~7.6:1 */
+  color: var(--cor-branco);
 }
 header img {
   display: block;
@@ -78,7 +81,7 @@ nav {
 }
 nav a {
   padding: 8px 12px;
-  background-color: #fff;
+  background-color: var(--cor-branco);
   color: var(--cor-primaria);
   border: 1px solid var(--cor-destaque1);
   text-decoration: none;
@@ -108,16 +111,16 @@ nav a:hover {
   width: 100%;
   padding: 16px;
   text-align: center;
-  background-color: rgba(38, 70, 83, 0.85);
-  color: #fff !important;   /* garante texto branco sobre o fundo azul-escuro */
+  background-color: var(--cor-overlay);
+  color: var(--cor-branco) !important;   /* garante texto branco sobre o fundo azul-escuro */
 }
 .hero article {
   position: absolute;
   bottom: 20px;
   left: 20px;
   right: 20px;
-  background-color: rgba(38, 70, 83, 0.85);
-  color: #fff;
+  background-color: var(--cor-overlay);
+  color: var(--cor-branco);
   border-radius: 8px;
   padding: 16px;
   margin: 0;
@@ -140,7 +143,7 @@ section {
   grid-template-columns: 1fr 200px 1fr;   /* texto | imagem | texto */
   align-items: center;
   gap: 8px;
-  background-color: #ddd;
+  background-color: var(--cor-fundo-claro);
 }
 .historia h2 {
   grid-column: 1 / -1;   /* título ocupa toda a largura */
@@ -187,7 +190,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   background-color: var(--cor-destaque1);
-  color: #fff;
+  color: var(--cor-branco);
 }
 footer p {
   flex: 1;
@@ -234,7 +237,8 @@ footer p {
 .mapa iframe {
   display: block;
   width: 100%;
-  border: 1px solid var(--cor-destaque1);
+  height: 300px;
+  border: 0;
 }
 
 .form-contato {
