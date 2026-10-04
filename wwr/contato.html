@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós | Empresa de Rafting</title>
-    <meta name="description" content="Conheça a história da nossa empresa de rafting e as aventuras que oferecemos.">
+    <title>Fale Conosco | Empresa de Rafting</title>
+    <meta name="description" content="Entre em contato com a Empresa de Rafting: endereço, telefone, e-mail e formulário de contato para dúvidas, reservas e sugestões.">
     <meta name="author" content="Tiago Gonçalves Fernandes">
     <link rel="stylesheet" href="estilos/rafting.css">
 </head>
@@ -20,44 +20,77 @@
     </header>
 
     <main>
-        <div class="hero">
-            <img src="imagens/rafting-1.jpg" alt="Bote descendo as corredeiras">
-            <h1>Nome da Empresa de Rafting</h1>
-            <article>
-                <img src="imagens/rafting-2.jpg" alt="Guia de rafting no rio">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas posuere quis ex ut fringilla. Nulla egestas non purus et suscipit. Donec tempus nunc neque, et egestas magna fringilla ut.</p>
-            </article>
-        </div>
-
-        <section class="historia">
-            <h2>História</h2>
-            <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer affert ut. Mei iisque.</p>
-            <img src="imagens/historia.jpg" alt="Nossa equipe no rio">
-            <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer affert ut. Mei iisque.</p>
+        <section class="contato-info">
+            <h1>Companhia de Rafting em Corredeiras</h1>
+            <p>123 Rua Principal do Rio</p>
+            <p>Foz do Iguaçu, Paraná</p>
+            <p>+55 45 99999-9999</p>
+            <p>info@correiras.com</p>
         </section>
 
-        <section class="aventuras">
-            <h2>A aventura está te esperando!</h2>
-            <div class="galeria">
+        <section class="contato-mapa-form">
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14733.0!2d-54.585!3d-25.512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1"
+                    width="100%"
+                    height="300"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Mapa da localização da empresa">
+                </iframe>
+            </div>
+
+            <form action="#" method="post" class="form-contato">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite aqui" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Digite aqui" required>
+
+                <fieldset class="proposito">
+                    <legend>Propósito da Mensagem</legend>
+                    <label>
+                        <input type="radio" name="proposito" value="duvida-geral" checked>
+                        Consulta Geral
+                    </label>
+                    <label>
+                        <input type="radio" name="proposito" value="pergunta-reserva">
+                        Pergunta sobre Reserva
+                    </label>
+                    <label>
+                        <input type="radio" name="proposito" value="sugestao">
+                        Sugestão de Site
+                    </label>
+                </fieldset>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite aqui"></textarea>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    Quero receber a newsletter mensal
+                </label>
+
+                <button type="submit">Entrar em Contato!</button>
+            </form>
+        </section>
+
+        <section class="equipe">
+            <h2>Estamos Aqui para Servi-lo</h2>
+            <div class="galeria-equipe">
                 <figure>
-                    <img src="imagens/passeio-1.jpg" alt="Salto no rio">
-                    <figcaption>Salto do Rio Negro</figcaption>
+                    <img src="imagens/funcionario-1.jpg" alt="Foto de perfil do guia de rafting">
+                    <figcaption>Guia de Rafting</figcaption>
                 </figure>
                 <figure>
-                    <img src="imagens/passeio-2.jpg" alt="Bote na corredeira">
-                    <figcaption>Corredeira do Rio Paranapanema</figcaption>
+                    <img src="imagens/funcionario-2.jpg" alt="Foto de perfil da recepcionista">
+                    <figcaption>Recepcionista</figcaption>
                 </figure>
                 <figure>
-                    <img src="imagens/passeio-3.jpg" alt="Grupo descendo o rio">
-                    <figcaption>Corredeira do Rio Jacaré</figcaption>
-                </figure>
-                <figure>
-                    <img src="imagens/passeio-4.jpg" alt="Trecho de corredeiras">
-                    <figcaption>Corredeira do Rio Itajaí</figcaption>
-                </figure>
-                <figure>
-                    <img src="imagens/passeio-5.jpg" alt="Cachoeira no rio">
-                    <figcaption>Cachoeira do Rio Juquiá</figcaption>
+                    <img src="imagens/funcionario-3.jpg" alt="Foto de perfil do instrutor de segurança">
+                    <figcaption>Instrutor de Segurança</figcaption>
                 </figure>
             </div>
         </section>
