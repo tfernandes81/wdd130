@@ -1,1 +1,92 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 16px;
+  color: #111;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 16px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: #dcdcdc;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+.campo {
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+input,
+textarea,
+select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+pre {
+  width: fit-content;
+  margin: 0 0 8px 36px;
+  padding: 10px 14px;
+  background-color: #1b1b1b;
+  color: #fff;
+  border-radius: 2px;
+  overflow-x: auto;
+  max-width: calc(100% - 36px);
+}
+
+code {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.85rem;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #3b3bbf;
+  border: 2px solid #1b1b5e;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2f2f9e;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: 3px solid #f5a623;
+  outline-offset: 1px;
+}
