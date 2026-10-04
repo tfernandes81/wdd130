@@ -32,7 +32,6 @@
             <div class="mapa">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9427.491501078559!2d-54.58928283305123!3d-25.53937980761141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1791154262239!5m2!1spt-BR!2sbr"
-                    style="border:0;"
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
@@ -49,16 +48,16 @@
 
                 <fieldset class="proposito">
                     <legend>Propósito da Mensagem</legend>
-                    <label>
-                        <input type="radio" name="proposito" value="duvida-geral" checked>
+                    <label for="duvida-geral">
+                        <input type="radio" id="duvida-geral" name="proposito" value="duvida-geral" checked>
                         Consulta Geral
                     </label>
-                    <label>
-                        <input type="radio" name="proposito" value="pergunta-reserva">
+                    <label for="pergunta-reserva">
+                        <input type="radio" id="pergunta-reserva" name="proposito" value="pergunta-reserva">
                         Pergunta sobre Reserva
                     </label>
-                    <label>
-                        <input type="radio" name="proposito" value="sugestao">
+                    <label for="sugestao-site">
+                        <input type="radio" id="sugestao-site" name="proposito" value="sugestao">
                         Sugestão de Site
                     </label>
                 </fieldset>
@@ -66,7 +65,7 @@
                 <label for="mensagem">Mensagem</label>
                 <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite aqui"></textarea>
 
-                <label class="checkbox-label">
+                <label class="checkbox-label" for="newsletter">
                     <input type="checkbox" id="newsletter" name="newsletter">
                     Quero receber a newsletter mensal
                 </label>
