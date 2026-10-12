@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Passeios | Empresa de Rafting</title>
-    <meta name="description" content="Conheça os passeios de rafting da nossa empresa: saltos, corredeiras e cachoeiras para todos os níveis de aventureiros.">
+    <meta name="description" content="Conheça os passeios de rafting da nossa empresa: saltos, corredeiras e cachoeiras para todos os níveis. Veja detalhes, níveis e durações e entre em contato para reservar.">
     <meta name="author" content="Tiago Gonçalves Fernandes">
     <link rel="stylesheet" href="estilos/rafting.css">
 </head>
@@ -14,97 +14,147 @@
         <nav>
             <a href="index.html">Página Inicial</a>
             <a href="sobre.html">Sobre Nós</a>
-            <a href="passeios.html" class="ativo">Passeios</a>
+            <a href="passeios.html">Passeios</a>
             <a href="contato.html">Fale Conosco</a>
         </nav>
     </header>
 
     <main>
-        <section class="intro-passeios">
-            <h1>Passeios de Rafting</h1>
-            <p>Cinco rios, cinco jeitos de viver a aventura. Escolha o seu e fale com a gente para reservar.</p>
+        <div class="passeios-topo">
+            <section class="intro-passeios">
+                <h1>Passeios de Rafting</h1>
+                <p>Cinco rios, cinco jeitos de viver a aventura. Conheça os roteiros em detalhe, compare níveis e durações na tabela e escolha o que combina com o seu grupo.</p>
+            </section>
+            <aside class="cta-topo">
+                <h2>Já sabe onde quer ir?</h2>
+                <p>Fale com a nossa equipe e reserve a sua data.</p>
+                <a href="contato.html" class="btn">Entrar em contato</a>
+            </aside>
+        </div>
+
+        <section class="detalhes">
+            <h2>Conheça os passeios em detalhe</h2>
+
+            <article class="passeio-card largo">
+                <img src="imagens/passeio-2.jpg" alt="Bote na corredeira do Rio Paranapanema">
+                <div class="passeio-corpo">
+                    <h3>Corredeira do Rio Paranapanema</h3>
+                    <ul class="selos">
+                        <li>Nível: Avançado</li>
+                        <li>Duração: 4 horas</li>
+                        <li>Idade mínima: 16 anos</li>
+                    </ul>
+                    <p>O roteiro mais intenso da nossa programação. A descida passa por uma sequência de corredeiras fortes, com ondas altas e trechos que exigem remada coordenada de todo o bote. O guia dá os comandos o tempo todo, e o grupo recebe instruções de segurança e treino de remada antes de entrar no rio.</p>
+                    <p>Indicado para quem já fez rafting ou quer sentir a força do rio sem meio-termo.</p>
+                    <a href="contato.html" class="btn">Reservar este passeio</a>
+                </div>
+            </article>
+
+            <article class="passeio-card">
+                <img src="imagens/passeio-3.jpg" alt="Grupo descendo a corredeira do Rio Jacaré">
+                <div class="passeio-corpo">
+                    <h3>Corredeira do Rio Jacaré</h3>
+                    <ul class="selos">
+                        <li>Nível: Iniciante</li>
+                        <li>Duração: 2 horas</li>
+                    </ul>
+                    <p>Um percurso de ondas leves e paradas para curtir a paisagem, perfeito para a primeira experiência. Pode ser feito por famílias, grupos de amigos e quem quer aventura sem pressão. O guia explica cada passo e há tempo para um mergulho no trecho calmo.</p>
+                    <a href="contato.html" class="btn">Reservar este passeio</a>
+                </div>
+            </article>
+
+            <article class="passeio-card">
+                <img src="imagens/passeio-5.jpg" alt="Cachoeira no Rio Juquiá">
+                <div class="passeio-corpo">
+                    <h3>Cachoeira do Rio Juquiá</h3>
+                    <ul class="selos">
+                        <li>Nível: Iniciante</li>
+                        <li>Duração: 2 horas</li>
+                    </ul>
+                    <p>O passeio combina uma descida tranquila de bote com uma parada em uma cachoeira, ideal para fotos e para se refrescar. É a escolha certa para quem busca contato com a natureza e um ritmo mais leve, mas sem abrir mão da diversão no rio.</p>
+                    <a href="contato.html" class="btn">Reservar este passeio</a>
+                </div>
+            </article>
         </section>
 
-        <article class="passeio">
-            <img src="imagens/passeio-1.jpg" alt="Salto no rio">
-            <div class="passeio-corpo">
-                <h2>Salto do Rio Negro</h2>
-                <ul class="selos">
-                    <li>Nível: Intermediário</li>
-                    <li>Duração: 3 horas</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas posuere quis ex ut fringilla. Nulla egestas non purus et suscipit.</p>
-                <a href="contato.html" class="btn">Reservar este passeio</a>
+        <section class="tabela-passeios">
+            <h2>Todos os passeios</h2>
+            <div class="tabela-rolagem">
+                <table>
+                    <caption>Informações resumidas dos passeios. Fale conosco para confirmar datas e disponibilidade.</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Passeio</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Nível</th>
+                            <th scope="col">Duração</th>
+                            <th scope="col">Idade mínima</th>
+                            <th scope="col">Ideal para</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Salto do Rio Negro</th>
+                            <td>Salto</td>
+                            <td>Intermediário</td>
+                            <td>3 horas</td>
+                            <td>12 anos</td>
+                            <td>Amigos em busca de emoção</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Corredeira do Rio Paranapanema</th>
+                            <td>Corredeira</td>
+                            <td>Avançado</td>
+                            <td>4 horas</td>
+                            <td>16 anos</td>
+                            <td>Aventureiros experientes</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Corredeira do Rio Jacaré</th>
+                            <td>Corredeira</td>
+                            <td>Iniciante</td>
+                            <td>2 horas</td>
+                            <td>8 anos</td>
+                            <td>Famílias e primeira vez</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Corredeira do Rio Itajaí</th>
+                            <td>Corredeira</td>
+                            <td>Intermediário</td>
+                            <td>3 horas</td>
+                            <td>12 anos</td>
+                            <td>Grupos que já remaram antes</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Cachoeira do Rio Juquiá</th>
+                            <td>Cachoeira</td>
+                            <td>Iniciante</td>
+                            <td>2 horas</td>
+                            <td>8 anos</td>
+                            <td>Quem quer natureza e calma</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </article>
-
-        <article class="passeio">
-            <img src="imagens/passeio-2.jpg" alt="Bote na corredeira">
-            <div class="passeio-corpo">
-                <h2>Corredeira do Rio Paranapanema</h2>
-                <ul class="selos">
-                    <li>Nível: Avançado</li>
-                    <li>Duração: 4 horas</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas posuere quis ex ut fringilla. Nulla egestas non purus et suscipit.</p>
-                <a href="contato.html" class="btn">Reservar este passeio</a>
-            </div>
-        </article>
-
-        <article class="passeio">
-            <img src="imagens/passeio-3.jpg" alt="Grupo descendo o rio">
-            <div class="passeio-corpo">
-                <h2>Corredeira do Rio Jacaré</h2>
-                <ul class="selos">
-                    <li>Nível: Iniciante</li>
-                    <li>Duração: 2 horas</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas posuere quis ex ut fringilla. Nulla egestas non purus et suscipit.</p>
-                <a href="contato.html" class="btn">Reservar este passeio</a>
-            </div>
-        </article>
-
-        <article class="passeio">
-            <img src="imagens/passeio-4.jpg" alt="Trecho de corredeiras">
-            <div class="passeio-corpo">
-                <h2>Corredeira do Rio Itajaí</h2>
-                <ul class="selos">
-                    <li>Nível: Intermediário</li>
-                    <li>Duração: 3 horas</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas posuere quis ex ut fringilla. Nulla egestas non purus et suscipit.</p>
-                <a href="contato.html" class="btn">Reservar este passeio</a>
-            </div>
-        </article>
-
-        <article class="passeio">
-            <img src="imagens/passeio-5.jpg" alt="Cachoeira no rio">
-            <div class="passeio-corpo">
-                <h2>Cachoeira do Rio Juquiá</h2>
-                <ul class="selos">
-                    <li>Nível: Iniciante</li>
-                    <li>Duração: 2 horas</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas posuere quis ex ut fringilla. Nulla egestas non purus et suscipit.</p>
-                <a href="contato.html" class="btn">Reservar este passeio</a>
-            </div>
-        </article>
-
-        <section class="inclui">
-            <h2>Em todos os passeios</h2>
-            <ul>
-                <li>Colete salva-vidas e capacete</li>
-                <li>Remo e bote</li>
-                <li>Guia experiente no bote</li>
-                <li>Instruções de segurança antes da descida</li>
-            </ul>
         </section>
 
-        <section class="chamada-final">
-            <h2>Não sabe qual escolher?</h2>
-            <p>Conte para a gente quem vai com você e indicamos o rio ideal para o seu grupo.</p>
-            <a href="contato.html" class="btn">Fale conosco</a>
-        </section>
+        <div class="fechamento">
+            <section class="inclui">
+                <h2>Em todos os passeios</h2>
+                <ul>
+                    <li>Colete salva-vidas e capacete</li>
+                    <li>Bote e remo</li>
+                    <li>Guia experiente no bote</li>
+                    <li>Instruções de segurança antes da descida</li>
+                </ul>
+            </section>
+
+            <section class="chamada-final">
+                <h2>Não sabe qual escolher?</h2>
+                <p>Conte para a gente quem vai com você e indicamos o rio ideal para o seu grupo.</p>
+                <a href="contato.html" class="btn">Fale conosco</a>
+            </section>
+        </div>
     </main>
 
     <footer>
