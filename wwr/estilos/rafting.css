@@ -362,13 +362,11 @@ nav a.ativo {
 }
 
 /* ==========================
-   Capa da Página Inicial
+   Página Inicial: capa
 ========================== */
 .capa {
   position: relative;
-  height: 460px;
-  margin: 0 0 16px 0;
-  padding: 0;
+  height: 480px;
   overflow: hidden;
 }
 .capa > img {
@@ -377,23 +375,30 @@ nav a.ativo {
   height: 100%;
   object-fit: cover;
 }
+/* Mensagem de cabeçalho sobre a imagem (posicionamento absoluto) */
+.capa h1 {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background-color: var(--cor-overlay);
+  color: var(--cor-branco);
+  font-size: 2.6rem;
+  line-height: 1.1;
+}
 .capa-texto {
   position: absolute;
-  inset: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: center;
   gap: 16px;
-  padding: 32px 40px 40px;
-  background: linear-gradient(to top, rgba(38, 70, 83, 0.95) 0%, rgba(38, 70, 83, 0.55) 55%, rgba(38, 70, 83, 0.1) 100%);
+  padding: 48px 40px 32px;
+  background: linear-gradient(to top, rgba(38, 70, 83, 0.95), rgba(38, 70, 83, 0));
   color: var(--cor-branco);
-}
-.capa-texto h1 {
-  color: var(--cor-branco);
-  font-size: 3rem;
-  line-height: 1.1;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 .capa-texto p {
   margin: 0;
@@ -401,38 +406,94 @@ nav a.ativo {
   max-width: 560px;
   font-size: 1.15rem;
   line-height: 1.4;
+  text-align: center;
 }
 .capa-botoes {
   display: flex;
   justify-content: center;
   gap: 16px;
-  margin-top: 8px;
 }
 
 /* ==========================
-   Faixa de diferenciais
+   Página Inicial: mosaico (CSS Grid)
 ========================== */
-.diferenciais {
+.mosaico {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1.3fr 1fr 1fr;
+  grid-template-areas:
+    "finalidade finalidade foto-a"
+    "foto-b     ofertas    ofertas";
   gap: 16px;
+  margin: 16px;
+}
+.mosaico h2 {
+  text-align: left;
+  margin-bottom: 8px;
+}
+.mosaico p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+.finalidade {
+  grid-area: finalidade;
+  padding: 24px;
+  background-color: var(--cor-fundo-claro);
+}
+.ofertas {
+  grid-area: ofertas;
+  padding: 24px;
   background-color: var(--cor-primaria);
   color: var(--cor-branco);
 }
-.diferenciais h3 {
-  font-family: var(--fonte-titulo);
-  font-size: 1.25rem;
+.ofertas h2 {
   color: var(--cor-destaque2);
-  margin-bottom: 4px;
 }
-.diferenciais p {
-  margin: 0;
-  padding: 0;
+.ofertas ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 20px;
+  list-style: none;
+}
+.ofertas li {
   font-size: 0.9rem;
+  line-height: 1.4;
 }
+.ofertas strong {
+  display: block;
+  color: var(--cor-destaque2);
+  font-family: var(--fonte-titulo);
+  font-size: 1.05rem;
+}
+.mosaico figure {
+  position: relative;
+  min-height: 200px;
+  margin: 0;
+}
+.mosaico figure img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid var(--cor-destaque1);
+}
+.mosaico figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 8px 12px;
+  background-color: var(--cor-overlay);
+  color: var(--cor-branco);
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+.foto-a { grid-area: foto-a; }
+.foto-b { grid-area: foto-b; }
 
 /* ==========================
-   Cartões de passeios (Início)
+   Página Inicial: cartões de passeios
 ========================== */
 .cartoes {
   display: grid;
@@ -440,7 +501,7 @@ nav a.ativo {
   gap: 16px;
   margin-top: 8px;
 }
-.cartao {
+a.cartao {
   display: flex;
   flex-direction: column;
   background-color: var(--cor-branco);
@@ -448,6 +509,8 @@ nav a.ativo {
   border-radius: 8px;
   overflow: hidden;
   text-align: left;
+  text-decoration: none;
+  color: inherit;
 }
 .cartao img {
   display: block;
@@ -469,126 +532,149 @@ nav a.ativo {
   padding: 0;
   font-size: 0.9rem;
 }
-.ver-todos {
-  margin-top: 16px;
-}
-.ver-todos .btn {
-  background-color: var(--cor-primaria);
-  border-color: var(--cor-primaria);
-  color: var(--cor-branco);
-}
-.ver-todos .btn:hover,
-.ver-todos .btn:focus-visible {
-  background-color: var(--cor-destaque2);
-  border-color: var(--cor-destaque2);
-  color: var(--cor-destaque1);
+a.cartao:hover h3,
+a.cartao:focus-visible h3 {
+  text-decoration: underline;
 }
 
 /* ==========================
-   Como funciona
+   Chamada para ação + newsletter (2 colunas)
 ========================== */
-.como-funciona {
-  background-color: var(--cor-fundo-claro);
-}
-.passos {
+.faixa-dupla {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 16px;
-  margin-top: 8px;
-  list-style: none;
-  counter-reset: passo;
+  margin: 16px;
 }
-.passos li {
-  counter-increment: passo;
-  padding: 8px;
-}
-.passos li::before {
-  content: counter(passo);
+.chamada-final {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  margin: 0 auto 8px;
-  border-radius: 50%;
-  background-color: var(--cor-primaria);
-  color: var(--cor-branco);
-  font-family: var(--fonte-titulo);
-  font-size: 1.4rem;
-  font-weight: bold;
-}
-.passos strong {
-  display: block;
-  margin-bottom: 4px;
-}
-
-/* ==========================
-   Chamada final (CTA)
-========================== */
-.chamada-final {
+  gap: 12px;
+  padding: 32px 24px;
   background-color: var(--cor-destaque1);
   color: var(--cor-branco);
-  padding: 32px 24px;
+  text-align: center;
 }
 .chamada-final h2 {
   color: var(--cor-destaque2);
-  font-size: 2rem;
-  margin-bottom: 8px;
+  font-size: 1.8rem;
 }
 .chamada-final p {
-  margin: 0 auto 16px;
+  margin: 0;
   padding: 0;
-  max-width: 520px;
+  max-width: 340px;
 }
-.chamada-final .contato-rapido {
-  margin: 16px 0 0;
-  font-weight: bold;
+.newsletter {
+  padding: 24px;
+  background-color: var(--cor-fundo-claro);
+  text-align: left;
+}
+.newsletter h2 {
+  text-align: left;
+  margin-bottom: 4px;
+}
+.newsletter > p {
+  margin: 0 0 12px;
+  padding: 0;
+  font-size: 0.9rem;
 }
 
 /* ==========================
    Página Passeios
 ========================== */
-.intro-passeios p {
-  max-width: 620px;
-  margin: 0 auto;
-}
-.passeio {
+.passeios-topo {
   display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 0;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  margin: 16px;
+}
+.intro-passeios {
+  padding: 8px 8px 8px 0;
+  text-align: left;
+}
+.intro-passeios h1 {
+  text-align: left;
+  margin-bottom: 8px;
+}
+.intro-passeios p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+.cta-topo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  background-color: var(--cor-destaque1);
+  color: var(--cor-branco);
+  text-align: center;
+}
+.cta-topo h2 {
+  color: var(--cor-destaque2);
+  font-size: 1.3rem;
+}
+.cta-topo p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.detalhes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 16px;
+}
+.detalhes > h2 {
+  grid-column: 1 / -1;
+}
+.passeio-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
   padding: 0;
   overflow: hidden;
-  text-align: left;
   background-color: var(--cor-branco);
   border: 1px solid var(--cor-destaque1);
   border-radius: 8px;
+  text-align: left;
 }
-.passeio:nth-of-type(even) {
-  grid-template-columns: 1fr 300px;
-}
-.passeio:nth-of-type(even) > img {
-  order: 2;
-}
-.passeio > img {
+.passeio-card > img {
   display: block;
   width: 100%;
-  height: 100%;
-  min-height: 220px;
+  height: 190px;
   object-fit: cover;
+}
+.passeio-card.largo {
+  grid-column: 1 / -1;
+  flex-direction: row;
+}
+.passeio-card.largo > img {
+  width: 45%;
+  height: auto;
+  min-height: 240px;
 }
 .passeio-corpo {
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 8px;
   padding: 16px 20px;
 }
-.passeio-corpo h2 {
-  text-align: left;
-  font-size: 1.4rem;
+.passeio-corpo h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-primaria);
+  font-size: 1.35rem;
 }
 .passeio-corpo p {
   margin: 0;
   padding: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
 }
 .selos {
   display: flex;
@@ -618,24 +704,70 @@ nav a.ativo {
   border-color: var(--cor-destaque2);
   color: var(--cor-destaque1);
 }
-.inclui {
+
+/* Tabela de passeios */
+.tabela-passeios h2 {
+  margin-bottom: 12px;
+}
+.tabela-rolagem {
+  overflow-x: auto;
+}
+.tabela-passeios table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  text-align: left;
+}
+.tabela-passeios caption {
+  caption-side: bottom;
+  padding: 8px 0 0;
+  font-size: 0.8rem;
+  text-align: left;
+}
+.tabela-passeios th,
+.tabela-passeios td {
+  padding: 10px 12px;
+  border: 1px solid var(--cor-destaque1);
+}
+.tabela-passeios thead th {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+}
+.tabela-passeios tbody th {
+  color: var(--cor-primaria);
+}
+.tabela-passeios tbody tr:nth-child(even) {
   background-color: var(--cor-fundo-claro);
 }
-.inclui ul {
+
+.fechamento {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px 24px;
-  margin: 8px auto 0;
-  max-width: 560px;
-  padding-left: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 16px;
+}
+.inclui {
+  margin: 0;
+  padding: 24px;
+  background-color: var(--cor-fundo-claro);
   text-align: left;
+}
+.inclui h2 {
+  text-align: left;
+  margin-bottom: 8px;
+}
+.inclui ul {
+  padding-left: 20px;
+  line-height: 1.7;
 }
 
 /* ==========================
    Acessibilidade e responsivo
 ========================== */
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
   outline: 3px solid var(--cor-destaque2);
   outline-offset: 2px;
 }
@@ -646,21 +778,23 @@ button:focus-visible {
   header, main, footer { width: 100%; }
   header { grid-template-columns: 1fr; justify-items: center; }
   nav { flex-wrap: wrap; justify-content: center; }
-  .capa { height: 420px; }
-  .capa-texto h1 { font-size: 2.1rem; }
+  .capa { height: 440px; }
+  .capa h1 { font-size: 1.8rem; }
   .capa-botoes { flex-direction: column; align-items: stretch; }
-  .diferenciais, .cartoes, .passos { grid-template-columns: 1fr; }
-  .passeio, .passeio:nth-of-type(even) { grid-template-columns: 1fr; }
-  .passeio:nth-of-type(even) > img { order: 0; }
-  .passeio > img { height: 200px; }
-  .inclui ul { grid-template-columns: 1fr; }
+  .mosaico {
+    grid-template-columns: 1fr;
+    grid-template-areas: "finalidade" "foto-a" "ofertas" "foto-b";
+  }
+  .ofertas ul { grid-template-columns: 1fr; }
+  .cartoes, .faixa-dupla, .passeios-topo, .detalhes, .fechamento {
+    grid-template-columns: 1fr;
+  }
+  .passeio-card.largo { flex-direction: column; }
+  .passeio-card.largo > img { width: 100%; height: 200px; min-height: 0; }
 }
 
-a.cartao {
-  text-decoration: none;
-  color: inherit;
-}
-a.cartao:hover h3,
-a.cartao:focus-visible h3 {
-  text-decoration: underline;
+/* Ajustes: remove a margem padrão de <section> dentro dos grids */
+.chamada-final,
+.intro-passeios {
+  margin: 0;
 }
